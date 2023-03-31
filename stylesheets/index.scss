@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+
+
+    header {
+        // Give the header a background colour, some padding to
+        // bring the logo down, center align text items, and
+        // remove whitespace
+        background-color: #78e9df ;
+        padding: 16px;
+        text-align: center;
+        width: 100vw;
+    
+        // bring the navbar lower and resize image to device width
+        .logo {
+            margin-bottom: 16px;
+
+            img {
+                width: 100vw;
+            }
+        }
+
+        
+
+        .navbar {
+            // use flecbox to align navbar items evenly
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            // give the navbar a more stylish font & recolour to match theme
+            background-color: #78e9df;
+            font-family: 'Segoe UI', sans-serif;
+            
+            
+            .navbar-item {
+                // Give navbar items some padding & margin to separate them
+                // & recolour (and make bolder) the font to match the theme.
+                margin-right: 10px;
+                padding: 10px;
+                color: black;
+                font-weight: 600;
+                // Remove underline
+                text-decoration: none;
+                // set the transition for the hover & select animations
+                transition: all 0.2s ease-in-out;
+            }
+
+            // Switch the text & background colours when hovered over
+            .navbar-item:hover {
+                background-color: black;
+                color: #78e9df;
+            }
+
+            // Create & apply animation when link is selected
+            .navbar-item.active {
+                background-color: black;
+                color: #78e9df;
+                animation: shake 0.3s ease-in-out;
+            }
+
+            @keyframes shake {
+                0% { transform: translateX(0); }
+                25% { transform: translateX(-5px); }
+                50% { transform: translateX(5px); }
+                75% { transform: translateX(-5px); }
+                100% { transform: translateX(0); }
+            }
+
+        }
+        
+    }
+
+}
