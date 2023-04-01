@@ -1,12 +1,18 @@
+$primary-background: #78e9df;
+
 body {
     margin: 0;
-
+    // Arrange the header & footer of the site
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
 
     header {
         // Give the header a background colour, some padding to
         // bring the logo down, center align text items, and
         // remove whitespace
-        background-color: #78e9df ;
+        background-color: $primary-background ;
         padding: 16px;
         text-align: center;
         width: 100vw;
@@ -65,9 +71,55 @@ body {
                 75% { transform: translateX(-5px); }
                 100% { transform: translateX(0); }
             }
-
         }
-        
-    }
+    } 
 
+    footer {
+        // recolour to match the theme
+        background-color: $primary-background;
+        // add some padding to bring the social media icons lower
+        padding: 16px;
+        // remove whitespace
+        width: 100vw;
+        position: fixed;
+        bottom: 0;
+    
+        // align the social media logos
+        .social-media {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 16px;
+
+            // resize the social media logos for mobile
+
+            img {
+                height: 40px;
+                width: 40px;
+            }
+        }
+
+        .info {
+            // Update font to match theme & position it better
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: 600;
+            margin-left: 8px;
+
+            .contact-info{
+                // align text to be in the center of the images
+                display: flex;
+                align-items: center;
+
+                span {
+                    // create some space between image & text
+                    margin-left: 6px;
+                }
+
+                img {
+                    // resize images for mobile screens
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+    }
 }
