@@ -32,6 +32,7 @@ body header .navbar .navbar-item {
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 body header .navbar .navbar-item:hover {
   background-color: black;
@@ -58,6 +59,48 @@ body header .navbar .navbar-item.active {
   100% {
     transform: translateX(0);
   }
+}
+body main {
+  background-color: #f3f3f3;
+  padding: 16px;
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .me {
+  margin-bottom: 6px;
+}
+body main .me img {
+  width: 90vw;
+  border-radius: 15px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+body main .summary {
+  background-color: white;
+  padding: 8px;
+  border-radius: 15px;
+  font-family: "Segoe UI", sans-serif;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+body main .contact-link {
+  width: 50vw;
+  height: 48px;
+  background-color: #78e9df;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+body main .contact-link a {
+  text-decoration: none;
+  color: black;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
 }
 body footer {
   background-color: #78e9df;

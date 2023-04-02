@@ -11,3 +11,4 @@ The header for the website contains my logo, which shows my name along with a na
 ### Footer
 The footer for the website includes links to my github, linkedin, and instagram displayed as the respective social media logos. Other contact details are provided below them.
 
+### Main

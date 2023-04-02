@@ -34,7 +34,7 @@ body {
             justify-content: space-around;
             align-items: center;
             // give the navbar a more stylish font & recolour to match theme
-            background-color: #78e9df;
+            background-color: $primary-background;
             font-family: 'Segoe UI', sans-serif;
 
             
@@ -50,20 +50,21 @@ body {
                 text-decoration: none;
                 // set the transition for the hover & select animations
                 transition: all 0.2s ease-in-out;
-                // add a box shadow to give the navbar some depth
+                // add a box shadow to give the navbar some depth & round borders
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
             }
 
             // Switch the text & background colours when hovered over
             .navbar-item:hover {
                 background-color: black;
-                color: #78e9df;
+                color: $primary-background;
             }
 
             // Create & apply animation when link is selected
             .navbar-item.active {
                 background-color: black;
-                color: #78e9df;
+                color: $primary-background;
                 animation: shake 0.3s ease-in-out;
             }
 
@@ -75,7 +76,59 @@ body {
                 100% { transform: translateX(0); }
             }
         }
-    } 
+    }
+
+    main {
+        background-color: #f3f3f3;
+        padding: 16px;
+        width: 100vw;
+        height: 75vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        .me {
+            margin-bottom: 6px;
+            
+
+
+            img {
+                width: 90vw;
+                border-radius: 15px;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        .summary {
+            background-color: white;
+            padding: 8px;
+            border-radius: 15px;
+            font-family:'Segoe UI', sans-serif;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-link {
+            width: 50vw;
+            height: 48px;
+            background-color: $primary-background;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-family: 'Segoe UI', sans-serif;
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+    }
+
+
 
     footer {
         // recolour to match the theme
@@ -159,6 +212,7 @@ body {
       }
 
       footer {
+        // adjust logo sizes & position
         .social-media {
             padding: 16px;
 
@@ -173,6 +227,7 @@ body {
 @media screen and (min-width:1024px) {
     body {
         header {
+            // Adjust formatting of header & keep it fixed at the top of the screen
             display: flex;
             flex-direction: row;
             justify-content: space-around;
@@ -180,6 +235,7 @@ body {
 
             .logo {
                 img {
+                    // resize logo to fit new layout
                     width: 20vw;
                 }
             }
@@ -187,12 +243,13 @@ body {
                 flex-direction: row;
 
                 .navbar-item {
+                    // Change width to be uniform for navbar components
                     width: 10vw;
                 }
             }
         }
         footer {
-            
+            // Re-position social media icons & contact details to fit desktop screens.
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-between;
@@ -207,4 +264,3 @@ body {
 
     }
 }
-  
