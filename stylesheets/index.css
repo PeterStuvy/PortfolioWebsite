@@ -156,14 +156,37 @@ body footer .info .contact-info img {
     margin-right: 0;
     margin-bottom: 8px;
     padding: 8px;
-    font-size: 16px;
+    font-size: 24px;
     width: 180px;
+  }
+  body main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60vh;
+  }
+  body main .me img {
+    width: 45vw;
+  }
+  body main .summary {
+    padding: 12px;
+    font-size: 20px;
+    width: 80%;
+  }
+  body main .contact-link {
+    width: 45vw;
+  }
+  body main .contact-link a {
+    font-size: 20px;
   }
   body footer .social-media {
     padding: 16px;
   }
   body footer .social-media img {
     transform: scale(1.25);
+  }
+  body footer .contact-info {
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 1024px) {

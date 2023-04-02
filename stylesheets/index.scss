@@ -205,10 +205,36 @@ body {
             margin-right: 0;
             margin-bottom: 8px;
             padding: 8px;
-            font-size: 16px;
+            font-size: 24px;
             width: 180px
           }
         }
+      }
+
+      main {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 60vh;
+        .me {
+            img {
+                width: 45vw;
+
+            }
+        }
+        .summary {
+            padding: 12px;
+            font-size: 20px;
+            width: 80%;
+        }
+
+        .contact-link {
+            width: 45vw;
+            a {
+            font-size: 20px;
+            }
+        }
+
       }
 
       footer {
@@ -219,6 +245,10 @@ body {
             img {
                 transform: scale(1.25);
             }
+        }
+
+        .contact-info {
+            font-size: 16px;
         }
       }
     }
