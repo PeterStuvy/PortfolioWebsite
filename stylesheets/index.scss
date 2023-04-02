@@ -29,13 +29,14 @@ body {
         
 
         .navbar {
-            // use flecbox to align navbar items evenly
+            // use flexbox to align navbar items evenly
             display: flex;
             justify-content: space-around;
             align-items: center;
             // give the navbar a more stylish font & recolour to match theme
             background-color: #78e9df;
             font-family: 'Segoe UI', sans-serif;
+
             
             
             .navbar-item {
@@ -49,6 +50,8 @@ body {
                 text-decoration: none;
                 // set the transition for the hover & select animations
                 transition: all 0.2s ease-in-out;
+                // add a box shadow to give the navbar some depth
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
             }
 
             // Switch the text & background colours when hovered over
@@ -123,3 +126,85 @@ body {
         }
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+  
+      header {
+        /* Adjust the logo and navbar layout to fit smaller screens */
+        flex-direction: column;
+        align-items: center;
+  
+        .logo {
+          margin-bottom: 8px;
+  
+          img {
+            width: 80vw;
+          }
+        }
+  
+        .navbar {
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+  
+          .navbar-item {
+            margin-right: 0;
+            margin-bottom: 8px;
+            padding: 8px;
+            font-size: 16px;
+            width: 180px
+          }
+        }
+      }
+
+      footer {
+        .social-media {
+            padding: 16px;
+
+            img {
+                transform: scale(1.25);
+            }
+        }
+      }
+    }
+  }
+
+@media screen and (min-width:1024px) {
+    body {
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            position: fixed;
+
+            .logo {
+                img {
+                    width: 20vw;
+                }
+            }
+            .navbar {
+                flex-direction: row;
+
+                .navbar-item {
+                    width: 10vw;
+                }
+            }
+        }
+        footer {
+            
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+
+            .social-media {
+                margin-right: 48px;
+                margin-top: 16px;
+                width: 20vw;
+            }
+        }
+
+    }
+}
+  
