@@ -63,51 +63,40 @@ body header .navbar .navbar-item.active {
 }
 body main {
   min-height: 62vh;
+  padding: 24px;
   background-color: #f3f3f3;
-  padding: 16px;
-  width: 100vw;
+  width: 96vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body main .me {
-  margin-bottom: 6px;
-}
-body main .me img {
+body main .contact {
   width: 90vw;
-  border-radius: 15px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transform: translatey(5vh);
 }
-body main .summary-contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-body main .summary-contact .summary {
-  background-color: white;
-  padding: 8px;
-  border-radius: 15px;
-  font-family: "Segoe UI", sans-serif;
-  margin-bottom: 12px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-body main .summary-contact .contact-link {
-  width: 50vw;
-  height: 48px;
+body main .contact .title {
   background-color: #78e9df;
-  border-radius: 50px;
+  border-radius: 15px;
+  width: 95%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+body main .contact .title h1 {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 32px;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+body main .contact .content {
+  background: white;
+  border-radius: 15px;
+  padding: 2px;
+  padding-left: 20px;
+  font-family: "Segoe UI", sans-serif;
+  transform: translatey(5vh);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-body main .summary-contact .contact-link a {
-  text-decoration: none;
-  color: black;
-  font-family: "Segoe UI", sans-serif;
+body main .contact .content .contact-item label {
   font-weight: 600;
-  font-size: 16px;
 }
 body footer {
   background-color: #78e9df;
@@ -167,23 +156,10 @@ body footer .info .contact-info img {
     width: 180px;
   }
   body main {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 45vh;
+    width: 98vw;
+    min-height: 46.5vh;
   }
-  body main .me img {
-    width: 45vw;
-  }
-  body main .summary-contact .summary {
-    padding: 12px;
-    font-size: 20px;
-    width: 80%;
-  }
-  body main .summary-contact .contact-link {
-    width: 45vw;
-  }
-  body main .summary-contact .contact-link a {
+  body main .content {
     font-size: 20px;
   }
   body footer .social-media {
@@ -212,28 +188,16 @@ body footer .info .contact-info img {
     width: 12vw;
   }
   body main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 69vh;
+    height: 67vh;
+    width: 98.75%;
   }
-  body main .me img {
-    width: 30vw;
-  }
-  body main .summary-contact {
+  body main .contact {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    height: 27vh;
   }
-  body main .summary-contact .summary {
-    width: 60vw;
-    font-size: 16px;
-  }
-  body main .summary-contact .contact-link {
-    width: 30vw;
+  body main .contact .content {
+    width: 70vw;
   }
   body footer {
     display: flex;
@@ -246,4 +210,4 @@ body footer .info .contact-info img {
     margin-top: 16px;
     width: 20vw;
   }
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=contact.css.map */
