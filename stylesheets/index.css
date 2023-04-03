@@ -194,7 +194,6 @@ body footer .info .contact-info img {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    position: fixed;
   }
   body header .logo img {
     width: 20vw;
@@ -203,7 +202,32 @@ body footer .info .contact-info img {
     flex-direction: row;
   }
   body header .navbar .navbar-item {
-    width: 10vw;
+    width: 12vw;
+  }
+  body main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body main .me img {
+    width: 30vw;
+    transform: translatey(-8vh);
+  }
+  body main .summary-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translatey(-8vh);
+    height: 27vh;
+  }
+  body main .summary-contact .summary {
+    width: 60vw;
+    font-size: 16px;
+  }
+  body main .summary-contact .contact-link {
+    width: 30vw;
   }
   body footer {
     display: flex;

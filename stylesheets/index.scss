@@ -261,7 +261,6 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            position: fixed;
 
             .logo {
                 img {
@@ -274,10 +273,44 @@ body {
 
                 .navbar-item {
                     // Change width to be uniform for navbar components
-                    width: 10vw;
+                    width: 12vw;
                 }
             }
         }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+            .me {
+                img {
+                    width: 30vw;
+                    transform: translatey(-8vh);
+                }
+            }
+
+            .summary-contact {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                transform: translatey(-8vh);
+                height: 27vh;
+
+                .summary {
+                    width: 60vw;
+                    font-size: 16px;
+                }
+
+                .contact-link {
+                    width: 30vw;
+                }
+            }
+
+        } 
+
         footer {
             // Re-position social media icons & contact details to fit desktop screens.
             display: flex;
