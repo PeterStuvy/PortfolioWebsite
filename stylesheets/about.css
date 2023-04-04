@@ -61,41 +61,35 @@ body header .navbar .navbar-item.active {
   }
 }
 body main {
-  min-height: 62vh;
-  padding: 24px;
   background-color: #f3f3f3;
-  width: 96vw;
+  width: 104vw;
+  padding: 8px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
-body main .contact {
-  width: 90vw;
-  transform: translatey(5vh);
-}
-body main .contact .title {
+body main h1 {
   background-color: #78e9df;
-  border-radius: 15px;
-  width: 95%;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-body main .contact .title h1 {
+  text-align: center;
+  border-radius: 10px;
   font-family: "Segoe UI", sans-serif;
-  font-size: 32px;
-  display: flex;
-  justify-content: center;
-}
-body main .contact .content {
-  background: white;
-  border-radius: 15px;
-  padding: 2px;
-  padding-left: 20px;
-  font-family: "Segoe UI", sans-serif;
-  transform: translatey(5vh);
+  width: 90vw;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
 }
-body main .contact .content .contact-item label {
-  font-weight: 600;
+body main p {
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  width: 90vw;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+body main img {
+  width: 90vw;
+  border-radius: 15px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 body footer {
   background-color: #78e9df;
@@ -154,11 +148,7 @@ body footer .info .contact-info img {
     width: 180px;
   }
   body main {
-    width: 98vw;
-    min-height: 46.5vh;
-  }
-  body main .content {
-    font-size: 20px;
+    width: 102vw;
   }
   body footer .social-media {
     padding: 16px;
@@ -186,16 +176,23 @@ body footer .info .contact-info img {
     width: 12vw;
   }
   body main {
-    height: 67vh;
-    width: 98.75%;
+    width: 101vw;
   }
-  body main .contact {
+  body main section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    justify-content: space-around;
     align-items: center;
   }
-  body main .contact .content {
-    width: 70vw;
+  body main section img {
+    width: 30vw;
+    margin: 16px;
+  }
+  body main section p {
+    width: 40vw;
+    margin: 16px;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   body footer {
     display: flex;
@@ -208,4 +205,4 @@ body footer .info .contact-info img {
     margin-top: 16px;
     width: 20vw;
   }
-}/*# sourceMappingURL=contact.css.map */
+}/*# sourceMappingURL=about.css.map */
