@@ -3,7 +3,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 100%;
+  min-height: 100vh;
 }
 body header {
   background-color: #78e9df;
@@ -61,32 +61,45 @@ body header .navbar .navbar-item.active {
   }
 }
 body main {
+  width: 104%;
   background-color: #f3f3f3;
-  width: 104vw;
-  padding: 8px;
+}
+body main #experience {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-evenly;
 }
-body main h1 {
+body main #experience h1 {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 32px;
+}
+body main #experience a {
+  color: black;
+  font-weight: 500;
+  font-family: "Segoe UI", sans-serif;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  background-color: #78e9df;
+  width: 45vw;
+  padding-top: 6px;
+  padding-bottom: 6px;
   text-align: center;
-  font-family: "Segoe UI", sans-serif;
-  width: 90vw;
-  margin-bottom: 12px;
+  margin: 16px;
 }
-body main p {
+body main #experience article {
+  width: 80vw;
   background-color: white;
-  padding: 10px;
+  padding-left: 16px;
+  padding-right: 12px;
   border-radius: 15px;
-  width: 90vw;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   font-family: "Segoe UI", sans-serif;
+  margin: 16px;
 }
-body main img {
-  width: 90vw;
-  border-radius: 15px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+body main #experience #solve {
+  margin-bottom: 32px;
 }
 body footer {
   background-color: #78e9df;
@@ -145,16 +158,8 @@ body footer .info .contact-info img {
     width: 180px;
   }
   body main {
-    width: 102vw;
-  }
-  body footer .social-media {
-    padding: 16px;
-  }
-  body footer .social-media img {
-    transform: scale(1.25);
-  }
-  body footer .contact-info {
-    font-size: 16px;
+    width: 102%;
+    min-height: 58vh;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -173,23 +178,8 @@ body footer .info .contact-info img {
     width: 12vw;
   }
   body main {
-    width: 101vw;
-  }
-  body main section {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-  body main section img {
-    width: 30vw;
-    margin: 16px;
-  }
-  body main section p {
-    width: 40vw;
-    margin: 16px;
-    height: -moz-fit-content;
-    height: fit-content;
+    width: 101%;
+    min-height: 72.5vh;
   }
   body footer {
     display: flex;
@@ -202,4 +192,4 @@ body footer .info .contact-info img {
     margin-top: 16px;
     width: 20vw;
   }
-}/*# sourceMappingURL=about.css.map */
+}/*# sourceMappingURL=experience.css.map */

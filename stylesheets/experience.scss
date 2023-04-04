@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100%;
+    min-height: 100vh;
 
     header {
         // Give the header a background colour, some padding to
@@ -77,53 +77,57 @@ body {
         }
     }
 
-main {
-    min-height: 62vh;
-    padding: 24px;
-    background-color: #f3f3f3;
-    width: 96vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    main {
+        width: 104%;
+        background-color: #f3f3f3;
+
+        #experience {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            
 
 
-    .contact {
-
-        width: 90vw;
-        transform: translatey(5vh);
-
-        .title {
-
-            width: 95%;
-           
             h1 {
                 font-family: 'Segoe UI', sans-serif;
                 font-size: 32px;
-                display: flex;
-                justify-content: center;
-            }
-        }
-
-        .content {
-            background: white;
-            border-radius: 15px;
-            padding: 2px;
-            padding-left: 20px;
-            font-family: 'Segoe UI', sans-serif;
-            transform: translatey(5vh);
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-
-            .contact-item {
-                label {
-                    font-weight: 600;
-                }
             }
 
-        }
+            a {
+                color: black;
+                font-weight: 500;
+                font-family: 'Segoe UI', sans-serif;
+                text-decoration: none;
+                // add a box shadow to give the navbar some depth & round borders
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                border-radius: 25px;
+                background-color: $primary-background;
+                width:45vw;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                text-align: center;
+                margin: 16px;
+            }
 
+            article {
+                width: 80vw;
+                background-color: white;
+                padding-left: 16px;
+                padding-right: 12px;
+                border-radius: 15px;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                font-family: 'Segoe UI', sans-serif;
+                margin: 16px;
+
+                
+            }
+
+            #solve {
+                margin-bottom: 32px;
+            }
+        }
     }
-
-}
 
     footer {
         // recolour to match the theme
@@ -206,30 +210,10 @@ main {
       }
 
       main {
-        width: 98vw;
-        min-height: 46.5vh;
-
-        
-        .content {
-            font-size: 20px;
-        }
-
+        width: 102%;
+        min-height: 58vh;
       }
 
-      footer {
-        // adjust logo sizes & position
-        .social-media {
-            padding: 16px;
-
-            img {
-                transform: scale(1.25);
-            }
-        }
-
-        .contact-info {
-            font-size: 16px;
-        }
-      }
     }
   }
 
@@ -258,23 +242,8 @@ main {
         }
 
         main {
-            height:67vh;
-            width:98.75%;
-
-            .contact {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-
-
-
-                .content {
-                    width: 70vw;
-                }
-
-            }
-
+            width: 101%;
+            min-height: 72.5vh;
 
         }
 

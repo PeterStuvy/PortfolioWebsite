@@ -74,10 +74,7 @@ body main .contact {
   transform: translatey(5vh);
 }
 body main .contact .title {
-  background-color: #78e9df;
-  border-radius: 15px;
   width: 95%;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 body main .contact .title h1 {
   font-family: "Segoe UI", sans-serif;
