@@ -1,0 +1,261 @@
+$primary-background: #78e9df;
+
+body {
+    margin: 0;
+    // Arrange the header & footer of the site
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+
+    header {
+        // Give the header a background colour, some padding to
+        // bring the logo down, center align text items, and
+        // remove whitespace
+        background-color: $primary-background ;
+        padding: 16px;
+        text-align: center;
+        width: 100vw;
+        
+    
+        // bring the navbar lower and resize image to device width
+        .logo {
+            margin-bottom: 16px;
+
+            img {
+                width: 100vw;
+            }
+        }
+
+        .navbar {
+            // use flexbox to align navbar items evenly
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            // give the navbar a more stylish font & recolour to match theme
+            background-color: $primary-background;
+            font-family: 'Segoe UI', sans-serif;
+
+            
+            
+            .navbar-item {
+                // Give navbar items some padding & margin to separate them
+                // & recolour (and make bolder) the font to match the theme.
+                margin-right: 10px;
+                padding: 10px;
+                color: black;
+                font-weight: 600;
+                // Remove underline
+                text-decoration: none;
+                // set the transition for the hover & select animations
+                transition: all 0.2s ease-in-out;
+                // add a box shadow to give the navbar some depth & round borders
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+            }
+
+            // Switch the text & background colours when hovered over
+            .navbar-item:hover {
+                background-color: black;
+                color: $primary-background;
+            }
+
+            // Create & apply animation when link is selected
+            .navbar-item.active {
+                background-color: black;
+                color: $primary-background;
+                animation: shake 0.3s ease-in-out;
+            }
+
+            @keyframes shake {
+                0% { transform: translateX(0); }
+                25% { transform: translateX(-5px); }
+                50% { transform: translateX(5px); }
+                75% { transform: translateX(-5px); }
+                100% { transform: translateX(0); }
+            }
+        }
+    }
+
+    main {
+        background-color: #f3f3f3;
+        width: 108%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-family: 'Segoe UI', sans-serif;
+
+        article {
+            background-color: white;
+            width: 90vw;
+            padding: 8px;
+            margin: 16px;
+            border-radius: 15px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+            img {
+                width:90vw;
+                border-radius: 15px;
+            }
+
+            a {
+                color: $primary-background;
+                font-weight: 900;
+            }
+
+        }
+    }
+
+    footer {
+        // recolour to match the theme
+        background-color: $primary-background;
+        // add some padding to bring the social media icons lower
+        padding: 16px;
+        // remove whitespace
+        width: 100vw;
+        bottom: 0;
+    
+        // align the social media logos
+        .social-media {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 16px;
+
+            // resize the social media logos for mobile
+
+            img {
+                height: 40px;
+                width: 40px;
+            }
+        }
+
+        .info {
+            // Update font to match theme & position it better
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: 600;
+            margin-left: 8px;
+
+            .contact-info{
+                // align text to be in the center of the images
+                display: flex;
+                align-items: center;
+
+                span {
+                    // create some space between image & text
+                    margin-left: 6px;
+                }
+
+                img {
+                    // resize images for mobile screens
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+  
+      header {
+        /* Adjust the logo and navbar layout to fit smaller screens */
+        flex-direction: column;
+        align-items: center;
+  
+        .logo {
+          margin-bottom: 8px;
+  
+          img {
+            width: 80vw;
+          }
+        }
+  
+        .navbar {
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+  
+          .navbar-item {
+            margin-right: 0;
+            margin-bottom: 8px;
+            padding: 8px;
+            font-size: 24px;
+            width: 180px
+          }
+        }
+      }
+      main {
+        width: 104%;
+      }
+    }
+  }
+
+@media screen and (min-width:1024px) {
+    body {
+        header {
+            // Adjust formatting of header & keep it fixed at the top of the screen
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            .logo {
+                img {
+                    // resize logo to fit new layout
+                    width: 20vw;
+                }
+            }
+            .navbar {
+                flex-direction: row;
+
+                .navbar-item {
+                    // Change width to be uniform for navbar components
+                    width: 12vw;
+                }
+            }
+        }
+
+        main {
+            width: 103%;
+
+
+            .content {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                margin-left: 9vw;
+                
+
+                article {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    width: 25vw;
+
+                    img {
+                        height: 25vh;
+                        width: auto;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+
+        footer {
+            // Re-position social media icons & contact details to fit desktop screens.
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+
+            .social-media {
+                margin-right: 48px;
+                margin-top: 16px;
+                width: 20vw;
+            }
+        }
+
+    }
+}
