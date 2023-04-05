@@ -1,22 +1,23 @@
 body {
   margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   min-height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
 }
 body header {
   background-color: #78e9df;
   padding: 16px;
   text-align: center;
-  width: 100vw;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 body header .logo {
   margin-bottom: 16px;
 }
 body header .logo img {
-  width: 100vw;
+  width: 90%;
+  margin: 16px;
 }
 body header .navbar {
   display: flex;
@@ -62,10 +63,10 @@ body header .navbar .navbar-item.active {
   }
 }
 body main {
-  min-height: 62vh;
+  flex-grow: 1;
   background-color: #f3f3f3;
   padding: 16px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,8 +113,7 @@ body main .summary-contact .contact-link a {
 body footer {
   background-color: #78e9df;
   padding: 16px;
-  width: 100vw;
-  bottom: 0;
+  width: 100%;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 body footer .social-media {
@@ -143,8 +143,11 @@ body footer .info .contact-info img {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    /* Adjust the layout of the main content to fit tablet screens */
+  }
   body header {
-    /* Adjust the logo and navbar layout to fit smaller screens */
+    /* Adjust the logo and navbar layout to fit tablet screens */
     flex-direction: column;
     align-items: center;
   }
@@ -216,7 +219,7 @@ body footer .info .contact-info img {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    min-height: 69vh;
+    height: 63.6vh;
   }
   body main .me img {
     width: 30vw;

@@ -1,29 +1,31 @@
 $primary-background: #78e9df;
 
 body {
+    // Remove whitespace
     margin: 0;
+    padding: 0;
     // Arrange the header & footer of the site
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     min-height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
 
     header {
-        // Give the header a background colour, some padding to
-        // bring the logo down, center align text items, and
-        // remove whitespace
+        // Change colour to default background
         background-color: $primary-background ;
+        // Better align the header items
         padding: 16px;
         text-align: center;
-        width: 100vw;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    
-        // bring the navbar lower and resize image to device width
+        width: 100%;
+
+        // bring the navbar lower
         .logo {
             margin-bottom: 16px;
 
+            // Make the logo fit the screen
             img {
-                width: 100vw;
+                width: 90%;
+                margin: 16px;
             }
         }
 
@@ -34,12 +36,11 @@ body {
             display: flex;
             justify-content: space-around;
             align-items: center;
+
             // give the navbar a more stylish font & recolour to match theme
             background-color: $primary-background;
             font-family: 'Segoe UI', sans-serif;
 
-            
-            
             .navbar-item {
                 // Give navbar items some padding & margin to separate them
                 // & recolour (and make bolder) the font to match the theme.
@@ -80,54 +81,70 @@ body {
     }
 
     main {
-        min-height: 62vh;
+        // add flex-grow to assist with responsive design
+        flex-grow: 1;
+        // Add grey background to main section
         background-color: #f3f3f3;
         padding: 16px;
-        width: 100vw;
+        width: 100%;
+        // Use flexbox to align items in center of screen
         display: flex;
         flex-direction: column;
         align-items: center;
     
         .me {
             margin-bottom: 6px;
-            
-
 
             img {
+                // resize image to fit screen
                 width: 90vw;
+                // curve corners
                 border-radius: 15px;
+                // add box shadow to photo
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
             }
         }
 
         .summary-contact {
+            // use flexbox to align main content
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
 
             .summary {
+                // Make background white & add some padding to align text
                 background-color: white;
                 padding: 8px;
+                // Curve corners
                 border-radius: 15px;
+                // Change font to match site theme
                 font-family:'Segoe UI', sans-serif;
+                // create some space between the summary & contact link
                 margin-bottom: 12px;
+                // Add shadow
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
             }
 
             .contact-link {
+                // resize & recolour contact link
                 width: 50vw;
                 height: 48px;
                 background-color: $primary-background;
+                // give the link round sides
                 border-radius: 50px;
+                // position text in centre
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                // give the link a shadow
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 
                 a {
+                    // remove underline & colour text black
                     text-decoration: none;
                     color: black;
+                    // Change font to match theme & make text larger & thicker
                     font-family: 'Segoe UI', sans-serif;
                     font-weight: 600;
                     font-size: 16px;
@@ -144,8 +161,7 @@ body {
         // add some padding to bring the social media icons lower
         padding: 16px;
         // remove whitespace
-        width: 100vw;
-        bottom: 0;
+        width: 100%;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     
         // align the social media logos
@@ -192,7 +208,7 @@ body {
     body {
   
       header {
-        /* Adjust the logo and navbar layout to fit smaller screens */
+        /* Adjust the logo and navbar layout to fit tablet screens */
         flex-direction: column;
         align-items: center;
   
@@ -218,7 +234,7 @@ body {
           }
         }
       }
-
+      /* Adjust the layout of the main content to fit tablet screens */
       main {
         display: flex;
         justify-content: flex-start;
@@ -249,7 +265,7 @@ body {
     }
 
       footer {
-        // adjust logo sizes & position
+        // adjust logo sizes & position to better suit tablet screens
         .social-media {
             padding: 16px;
 
@@ -290,11 +306,12 @@ body {
         }
 
         main {
+            // Adjust main content layout to fit desktop screens
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            min-height: 69vh;
+            height: 63.6vh;
 
             .me {
                 img {

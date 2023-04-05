@@ -1,43 +1,46 @@
 $primary-background: #78e9df;
 
 body {
+    // Remove whitespace
     margin: 0;
+    padding: 0;
     // Arrange the header & footer of the site
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     min-height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
 
     header {
-        // Give the header a background colour, some padding to
-        // bring the logo down, center align text items, and
-        // remove whitespace
+        // Change colour to default background
         background-color: $primary-background ;
+        // Better align the header items
         padding: 16px;
         text-align: center;
-        width: 100vw;
-        
-    
-        // bring the navbar lower and resize image to device width
+        width: 100%;
+
+        // bring the navbar lower
         .logo {
             margin-bottom: 16px;
 
+            // Make the logo fit the screen
             img {
-                width: 100vw;
+                width: 90%;
+                margin: 16px;
             }
         }
+
+        
 
         .navbar {
             // use flexbox to align navbar items evenly
             display: flex;
             justify-content: space-around;
             align-items: center;
+
             // give the navbar a more stylish font & recolour to match theme
             background-color: $primary-background;
             font-family: 'Segoe UI', sans-serif;
 
-            
-            
             .navbar-item {
                 // Give navbar items some padding & margin to separate them
                 // & recolour (and make bolder) the font to match the theme.
@@ -78,17 +81,19 @@ body {
     }
 
 main {
+    // set height, padding & background colour of main section
     min-height: 62vh;
     padding: 24px;
     background-color: #f3f3f3;
-    width: 96vw;
+    width: 100%;
+    // Use flexbox to align content
     display: flex;
     flex-direction: column;
     align-items: center;
 
 
     .contact {
-
+        // reposition content to better fit layout
         width: 90vw;
         transform: translatey(5vh);
 
@@ -97,23 +102,32 @@ main {
             width: 95%;
            
             h1 {
+                // Change font & resize to better suit theme
                 font-family: 'Segoe UI', sans-serif;
                 font-size: 32px;
+                // reposition title
                 display: flex;
                 justify-content: center;
             }
         }
 
         .content {
+            // Set background colour to white
             background: white;
+            // Curve corners
             border-radius: 15px;
+            // Add some padding to content
             padding: 2px;
             padding-left: 20px;
+            // Change font to match theme
             font-family: 'Segoe UI', sans-serif;
+            // Reposition content to better suit theme
             transform: translatey(5vh);
+            // Add box shadow
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 
             .contact-item {
+                // Increase boldness of font for contact detail labels
                 label {
                     font-weight: 600;
                 }
@@ -131,7 +145,7 @@ main {
         // add some padding to bring the social media icons lower
         padding: 16px;
         // remove whitespace
-        width: 100vw;
+        width: 100%;
         bottom: 0;
     
         // align the social media logos
@@ -205,10 +219,13 @@ main {
         }
       }
 
+    //   Resize main section ot better suit tablet screens
+
       main {
         width: 98vw;
         min-height: 46.5vh;
 
+        // Change font size to increase readability with tablet screens
         
         .content {
             font-size: 20px;
@@ -258,10 +275,13 @@ main {
         }
 
         main {
+
+            // Change sizing to better suit desktop screens
             height:67vh;
             width:98.75%;
 
             .contact {
+            // Repsoition content to better suit desktop screens
             display: flex;
             flex-direction: column;
             align-items: center;

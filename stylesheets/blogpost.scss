@@ -1,43 +1,46 @@
 $primary-background: #78e9df;
 
 body {
+    // Remove whitespace
     margin: 0;
+    padding: 0;
     // Arrange the header & footer of the site
     display: flex;
+    min-height: 100%;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+    justify-content: space-around;
 
     header {
-        // Give the header a background colour, some padding to
-        // bring the logo down, center align text items, and
-        // remove whitespace
+        // Change colour to default background
         background-color: $primary-background ;
+        // Better align the header items
         padding: 16px;
         text-align: center;
-        width: 100vw;
-        
-    
-        // bring the navbar lower and resize image to device width
+        width: 100%;
+
+        // bring the navbar lower
         .logo {
             margin-bottom: 16px;
 
+            // Make the logo fit the screen
             img {
-                width: 100vw;
+                width: 90%;
+                margin: 16px;
             }
         }
+
+        
 
         .navbar {
             // use flexbox to align navbar items evenly
             display: flex;
             justify-content: space-around;
             align-items: center;
+
             // give the navbar a more stylish font & recolour to match theme
             background-color: $primary-background;
             font-family: 'Segoe UI', sans-serif;
 
-            
-            
             .navbar-item {
                 // Give navbar items some padding & margin to separate them
                 // & recolour (and make bolder) the font to match the theme.
@@ -78,9 +81,10 @@ body {
     }
 
     main {
+        // 
         background-color: #f3f3f3;
         padding: 12px;
-        width: 101.8%;
+        width: 100%;
         font-family: 'Segoe UI', sans-serif;
 
         article {
@@ -107,7 +111,7 @@ body {
         // add some padding to bring the social media icons lower
         padding: 16px;
         // remove whitespace
-        width: 100vw;
+        width: 100%;
         bottom: 0;
     
         // align the social media logos
@@ -185,11 +189,13 @@ body {
 
 @media screen and (min-width:1024px) {
     body {
+        width: 100%;
         header {
             // Adjust formatting of header & keep it fixed at the top of the screen
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+            width: 100%;
 
             .logo {
                 img {
@@ -211,6 +217,7 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
 
 
             article {
@@ -241,6 +248,7 @@ body {
             flex-direction: row-reverse;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
 
             .social-media {
                 margin-right: 48px;

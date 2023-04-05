@@ -1,21 +1,23 @@
 body {
   margin: 0;
+  padding: 0;
   display: flex;
+  min-height: 100%;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
+  justify-content: space-around;
 }
 body header {
   background-color: #78e9df;
   padding: 16px;
   text-align: center;
-  width: 100vw;
+  width: 100%;
 }
 body header .logo {
   margin-bottom: 16px;
 }
 body header .logo img {
-  width: 100vw;
+  width: 90%;
+  margin: 16px;
 }
 body header .navbar {
   display: flex;
@@ -150,6 +152,7 @@ body footer .info .contact-info img {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 100%;
   }
   body header .logo img {
     width: 20vw;
@@ -161,7 +164,7 @@ body footer .info .contact-info img {
     width: 12vw;
   }
   body main {
-    width: 103%;
+    width: 102%;
   }
   body main .content {
     display: flex;
@@ -186,6 +189,7 @@ body footer .info .contact-info img {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
   body footer .social-media {
     margin-right: 48px;

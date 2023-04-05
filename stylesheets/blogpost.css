@@ -1,21 +1,23 @@
 body {
   margin: 0;
+  padding: 0;
   display: flex;
+  min-height: 100%;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
+  justify-content: space-around;
 }
 body header {
   background-color: #78e9df;
   padding: 16px;
   text-align: center;
-  width: 100vw;
+  width: 100%;
 }
 body header .logo {
   margin-bottom: 16px;
 }
 body header .logo img {
-  width: 100vw;
+  width: 90%;
+  margin: 16px;
 }
 body header .navbar {
   display: flex;
@@ -63,7 +65,7 @@ body header .navbar .navbar-item.active {
 body main {
   background-color: #f3f3f3;
   padding: 12px;
-  width: 101.8%;
+  width: 100%;
   font-family: "Segoe UI", sans-serif;
 }
 body main article {
@@ -82,7 +84,7 @@ body main article .title img {
 body footer {
   background-color: #78e9df;
   padding: 16px;
-  width: 100vw;
+  width: 100%;
   bottom: 0;
 }
 body footer .social-media {
@@ -137,10 +139,14 @@ body footer .info .contact-info img {
   }
 }
 @media screen and (min-width: 1024px) {
+  body {
+    width: 100%;
+  }
   body header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 100%;
   }
   body header .logo img {
     width: 20vw;
@@ -155,6 +161,7 @@ body footer .info .contact-info img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
   body main article {
     width: 70vw;
@@ -176,6 +183,7 @@ body footer .info .contact-info img {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
   body footer .social-media {
     margin-right: 48px;

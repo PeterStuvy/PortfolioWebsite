@@ -1,43 +1,46 @@
 $primary-background: #78e9df;
 
 body {
+    // Remove whitespace
     margin: 0;
+    padding: 0;
     // Arrange the header & footer of the site
     display: flex;
+    min-height: 100%;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+    justify-content: space-around;
 
     header {
-        // Give the header a background colour, some padding to
-        // bring the logo down, center align text items, and
-        // remove whitespace
+        // Change colour to default background
         background-color: $primary-background ;
+        // Better align the header items
         padding: 16px;
         text-align: center;
-        width: 100vw;
-        
-    
-        // bring the navbar lower and resize image to device width
+        width: 100%;
+
+        // bring the navbar lower
         .logo {
             margin-bottom: 16px;
 
+            // Make the logo fit the screen
             img {
-                width: 100vw;
+                width: 90%;
+                margin: 16px;
             }
         }
+
+        
 
         .navbar {
             // use flexbox to align navbar items evenly
             display: flex;
             justify-content: space-around;
             align-items: center;
+
             // give the navbar a more stylish font & recolour to match theme
             background-color: $primary-background;
             font-family: 'Segoe UI', sans-serif;
 
-            
-            
             .navbar-item {
                 // Give navbar items some padding & margin to separate them
                 // & recolour (and make bolder) the font to match the theme.
@@ -199,6 +202,7 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+            width: 100%;
 
             .logo {
                 img {
@@ -217,7 +221,7 @@ body {
         }
 
         main {
-            width: 103%;
+            width: 102%;
 
 
             .content {
@@ -249,6 +253,7 @@ body {
             flex-direction: row-reverse;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
 
             .social-media {
                 margin-right: 48px;
